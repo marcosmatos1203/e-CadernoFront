@@ -27,6 +27,7 @@ import { FormatarEnumPipe } from './shared/pipes/formatar-enum.pipe';
 import { ProdutorCriarComponent } from './produtor/criar/produtor-criar.component';
 import { ProdutorListarComponent } from './produtor/listar/produtor-listar.component';
 import { ProdutorEditarComponent } from './produtor/editar/produtor-editar.component';
+import { HttpProdutorService } from './produtor/services/http-produtor.service';
 
 registerLocaleData(ptBr);
 
@@ -61,7 +62,8 @@ registerLocaleData(ptBr);
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
     { provide: 'IHttpParceiroServiceToken', useClass: HttpParceiroService },
-    { provide: 'IHttpCupomServiceToken', useClass: HttpCupomService }
+    { provide: 'IHttpCupomServiceToken', useClass: HttpCupomService },
+    { provide: 'IHttpProdutorServiceToken', useClass: HttpProdutorService }
   ],
   bootstrap: [AppComponent]
 })
