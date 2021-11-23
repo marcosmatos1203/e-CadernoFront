@@ -28,6 +28,14 @@ import { ProdutorCriarComponent } from './produtor/criar/produtor-criar.componen
 import { ProdutorListarComponent } from './produtor/listar/produtor-listar.component';
 import { ProdutorEditarComponent } from './produtor/editar/produtor-editar.component';
 import { HttpProdutorService } from './produtor/services/http-produtor.service';
+import { HttpPomarService } from './pomar/services/http-pomar.service';
+import { PomarCriarComponent } from './pomar/criar/pomar-criar.component';
+import { PomarEditarComponent } from './pomar/editar/pomar-editar.component';
+import { PomarListarComponent } from './pomar/listar/pomar-listar.component';
+import { RespTecnicoListarComponent } from './respTecnico/listar/resp-tecnico-listar.component';
+import { RespTecnicoCriarComponent } from './respTecnico/criar/resp-tecnico-criar.component';
+import { RespTecnicoEditarComponent } from './respTecnico/editar/resp-tecnico-editar.component';
+import { HttpRespTecnicoService } from './respTecnico/services/http-resp-tecnico.service';
 
 registerLocaleData(ptBr);
 
@@ -49,6 +57,12 @@ registerLocaleData(ptBr);
     ProdutorCriarComponent,
     ProdutorListarComponent,
     ProdutorEditarComponent,
+    PomarCriarComponent,
+    PomarEditarComponent,
+    PomarListarComponent,
+    RespTecnicoListarComponent,
+    RespTecnicoCriarComponent,
+    RespTecnicoEditarComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +77,9 @@ registerLocaleData(ptBr);
     { provide: LOCALE_ID, useValue: 'pt' },
     { provide: 'IHttpParceiroServiceToken', useClass: HttpParceiroService },
     { provide: 'IHttpCupomServiceToken', useClass: HttpCupomService },
-    { provide: 'IHttpProdutorServiceToken', useClass: HttpProdutorService }
+    { provide: 'IHttpProdutorServiceToken', useClass: HttpProdutorService },
+    { provide: 'IHttpPomarServiceToken', useClass: HttpPomarService },
+    { provide: 'IHttpRespTecnicoServiceToken', useClass: HttpRespTecnicoService}
   ],
   bootstrap: [AppComponent]
 })

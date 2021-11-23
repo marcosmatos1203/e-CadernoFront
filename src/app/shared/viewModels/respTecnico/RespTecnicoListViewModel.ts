@@ -4,4 +4,5 @@ export class RespTecnicoListViewModel{
     cidade: string;
     telefone1: string;
     telefone2: string;
+    crea:string;
 }

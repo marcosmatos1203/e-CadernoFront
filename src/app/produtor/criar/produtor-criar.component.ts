@@ -41,7 +41,7 @@ export class ProdutorCriarComponent implements OnInit {
           this.toastService.show('Produtor ' + produtor.nome + ' adicionado com sucesso!',
             { classname: 'bg-success text-light', delay: 5000 });
           setTimeout(() => {
-            this.router.navigate(['parceiro/listar']);
+            this.router.navigate(['produtor/listar']);
           }, 5000);
         },
         erro => {

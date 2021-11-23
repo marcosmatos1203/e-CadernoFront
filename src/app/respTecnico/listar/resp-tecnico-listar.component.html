@@ -1,14 +1,14 @@
 <div class="container main-container">
-    <h4>Lista Produtores</h4>
+    <h4>Lista Resp. Técnicos</h4>
     <hr />
     <div style="float: right;">
-        <button class="btn btn-dark" [routerLink]="['/produtor/criar']">Cadastrar</button>
-        <button class="btn btn-dark" [routerLink]="['/produtor/editar', produtorSelecionado]"
-            [disabled]="!produtorSelecionado">Editar</button>
-        <button class="btn btn-dark" [routerLink]="['/pomar/produtor', produtorSelecionado]"
-            [disabled]="!produtorSelecionado">Pomares</button>
+        <button class="btn btn-dark" [routerLink]="['/respTecnico/criar']">Cadastrar</button>
+        <button class="btn btn-dark" [routerLink]="['/respTecnico/editar', respTecnicoSelecionado]"
+            [disabled]="!respTecnicoSelecionado">Editar</button>
+        <button class="btn btn-dark" [routerLink]="['/pomar/respTecnico', respTecnicoSelecionado]"
+            [disabled]="!respTecnicoSelecionado">Pomares</button>
         <button class="btn btn-dark" (click)="abrirConfirmacao(modalExclusao)"
-            [disabled]="!produtorSelecionado">Excluir</button>
+            [disabled]="!respTecnicoSelecionado">Excluir</button>
     </div>
     <br>
     <br>
@@ -18,24 +18,26 @@
                 <th scope="col"></th>
                 <th scope="col">Id</th>
                 <th scope="col">Nome</th>
+                <th scope="col">CREA</th>
                 <th scope="col">Cidade</th>
                 <th scope="col">Telefone</th>
                 <th scope="col">Celular</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let produtor of listaProdutores">
+            <tr *ngFor="let respTecnico of listaRespTecnicos">
                 <td>
                     <div class="custom-control">
                         <input type="radio" name="flexRadioDefault" class="custom-control-input" id="customRadio"
-                            value="{{ produtor.id }}" [(ngModel)]="produtorSelecionado">
+                            value="{{ respTecnico.id }}" [(ngModel)]="respTecnicoSelecionado">
                     </div>
                 </td>
-                <td>{{ produtor.id }}</td>
-                <td>{{ produtor.nome }}</td>
-                <td>{{ produtor.cidade }}</td>
-                <td>{{ produtor.telefone1 }}</td>
-                <td>{{ produtor.telefone2 }}</td>
+                <td>{{ respTecnico.id }}</td>
+                <td>{{ respTecnico.nome }}</td>
+                <td>{{ respTecnico.crea }}</td>
+                <td>{{ respTecnico.cidade }}</td>
+                <td>{{ respTecnico.telefone1 }}</td>
+                <td>{{ respTecnico.telefone2 }}</td>
             </tr>
         </tbody>
     </table>
@@ -50,10 +52,10 @@
 
 <ng-template #modalExclusao let-modal>
     <div class="modal-header">
-        <h4 class="modal-title">Excluir Produtor</h4>
+        <h4 class="modal-title">Excluir Resp. Técnico</h4>
     </div>
     <div class="modal-body">
-        Deseja realmente excluir esse Produtor?
+        Deseja realmente excluir esse Resp. Técnico?
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-danger" (click)="modal.close('Excluir')">Excluir</button>

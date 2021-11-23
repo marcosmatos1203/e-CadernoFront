@@ -1,5 +1,5 @@
 <div class="container main-container">
-    <h4>Cadastrar Produtor</h4>
+    <h4>Cadastrar Pomar</h4>
     <hr />
     <form novalidate [formGroup]="cadastroForm" (ngSubmit)='adicionar()'>
         <div clas="form-group">
@@ -13,6 +13,7 @@
                     Campo Nome é obrigatório
                 </span>
             </div>
+            
             <label class="col-md-2 control-label" for="logradouro">Logradouro</label>
             <div class="col-md-10">
                 <input class="form-control" id="logradouro" type="text" placeholder="logradouro (requerido)"
@@ -63,35 +64,20 @@
                     Campo CEP é obrigatório
                 </span>                
             </div>
-            <label class="col-md-2 control-label" for="email">e-mail</label>
+
+            <label class="col-md-2 control-label" for="respTecnico">Resp. Técnico</label>
             <div class="col-md-10">
-                <input class="form-control" id="email" type="text" placeholder="email (requerido)"
-                    formControlName="email" />
+                <select class="form-control" id="respTecnicoId" formControlName="respTecnicoId">
+                    <option value="">Selecione um Resp. Técnico</option>
+                    <option *ngFor="let respTecnico of listaRespTecnicos" value={{respTecnico.id}}>
+                        {{respTecnico.nome}}
+                    </option>
+                </select>
                 <span
-                    *ngIf="cadastroForm.controls.email.errors && (cadastroForm.controls.email.dirty || cadastroForm.controls.email.touched)"
+                    *ngIf="cadastroForm.controls.respTecnicoId.errors && (cadastroForm.controls.respTecnicoId.dirty || cadastroForm.controls.respTecnicoId.touched)"
                     class="alert">
-                    Campo e-mail é obrigatório
-                </span>                
-            </div>
-            <label class="col-md-2 control-label" for="telefone1">Telefone</label>
-            <div class="col-md-10">
-                <input class="form-control" id="telefone1" type="text" placeholder="telefone1 (requerido)"
-                    formControlName="telefone1" />
-                <span
-                    *ngIf="cadastroForm.controls.telefone1.errors && (cadastroForm.controls.telefone1.dirty || cadastroForm.controls.telefone1.touched)"
-                    class="alert">
-                    Campo Telefone é obrigatório
-                </span>                
-            </div>
-            <label class="col-md-2 control-label" for="telefone2">Celular</label>
-            <div class="col-md-10">
-                <input class="form-control" id="telefone2" type="text" placeholder="telefone2 (requerido)"
-                    formControlName="telefone2" />
-                <span
-                    *ngIf="cadastroForm.controls.telefone2.errors && (cadastroForm.controls.telefone2.dirty || cadastroForm.controls.telefone2.touched)"
-                    class="alert">
-                    Campo Celular é obrigatório
-                </span>                
+                    Campo Responsável Técnico é obrigatório
+                </span>
             </div>
         </div>
         <br>

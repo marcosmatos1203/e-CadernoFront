@@ -1,0 +1,12 @@
+
+export class PomarDetailsViewModel{
+    id: number;
+    nome: string;
+    logradouro: string;
+    bairro_localidade: string;
+    cidade: string;
+    estado: string;
+    cep: string;
+    produtorId:number;
+    respTecnicoId: number;
+}

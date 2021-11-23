@@ -1,14 +1,12 @@
 <div class="container main-container">
-    <h4>Lista Produtores</h4>
+    <h4>Lista Pomares</h4>
     <hr />
     <div style="float: right;">
-        <button class="btn btn-dark" [routerLink]="['/produtor/criar']">Cadastrar</button>
-        <button class="btn btn-dark" [routerLink]="['/produtor/editar', produtorSelecionado]"
-            [disabled]="!produtorSelecionado">Editar</button>
-        <button class="btn btn-dark" [routerLink]="['/pomar/produtor', produtorSelecionado]"
-            [disabled]="!produtorSelecionado">Pomares</button>
+        <button class="btn btn-dark" [routerLink]="['/pomar/criar',id]">Cadastrar</button>
+        <button class="btn btn-dark" [routerLink]="['/pomar/editar', pomarSelecionado]"
+            [disabled]="!pomarSelecionado">Editar</button>
         <button class="btn btn-dark" (click)="abrirConfirmacao(modalExclusao)"
-            [disabled]="!produtorSelecionado">Excluir</button>
+            [disabled]="!pomarSelecionado">Excluir</button>
     </div>
     <br>
     <br>
@@ -18,42 +16,41 @@
                 <th scope="col"></th>
                 <th scope="col">Id</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Cidade</th>
-                <th scope="col">Telefone</th>
-                <th scope="col">Celular</th>
+                <th scope="col">cidade</th>
+                <th scope="col">Resp. Tecnico</th>
+                <th scope="col">Produtor</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let produtor of listaProdutores">
+            <tr *ngFor="let pomar of listaPomares">
                 <td>
                     <div class="custom-control">
                         <input type="radio" name="flexRadioDefault" class="custom-control-input" id="customRadio"
-                            value="{{ produtor.id }}" [(ngModel)]="produtorSelecionado">
+                            value="{{ pomar.id }}" [(ngModel)]="pomarSelecionado">
                     </div>
                 </td>
-                <td>{{ produtor.id }}</td>
-                <td>{{ produtor.nome }}</td>
-                <td>{{ produtor.cidade }}</td>
-                <td>{{ produtor.telefone1 }}</td>
-                <td>{{ produtor.telefone2 }}</td>
+                <td>{{ pomar.id }}</td>
+                <td>{{ pomar.nome }}</td>
+                <td>{{ pomar.cidade }}</td>
+                <td>{{ pomar.respTecnico.nome}}</td>
+                <td>{{ pomar.produtor.nome}}</td>
             </tr>
         </tbody>
     </table>
 
     <div class="d-flex justify-content-between p-2">
         <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
-            (pageChange)="atualizar()">
+            (pageChange)="atualizarPomares()">
         </ngb-pagination>
     </div>
-
 </div>
 
 <ng-template #modalExclusao let-modal>
     <div class="modal-header">
-        <h4 class="modal-title">Excluir Produtor</h4>
+        <h4 class="modal-title">Excluir Pomar</h4>
     </div>
     <div class="modal-body">
-        Deseja realmente excluir esse Produtor?
+        Deseja realmente excluir esse Pomar?
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-danger" (click)="modal.close('Excluir')">Excluir</button>

@@ -20,7 +20,7 @@ export class HttpProdutorService implements IHttpProdutorService {
   obter(): Observable<ProdutorListViewModel[]> {
     return this.http.get<ProdutorListViewModel[]>(`${this.url}`);
   }
-  adicionar(obj: ProdutorCreateViewModel): Observable<ProdutorCreateViewModel> {
+  adicionar(obj: ProdutorCreateViewModel): Observable<ProdutorCreateViewModel> {    
     return this.http.post<ProdutorCreateViewModel>(this.url, obj);
   }
   obterPorId(id: number): Observable<ProdutorDetailsViewModel> {
