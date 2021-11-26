@@ -7,7 +7,6 @@ import { IHttpRespTecnicoService } from 'src/app/shared/interfaces/IHttpRespTecn
 import { ToastService } from 'src/app/shared/services/toast.service';
 import { PomarCreateViewModel } from 'src/app/shared/viewModels/Pomar/PomarCreateViewModel';
 import { ProdutorDetailsViewModel } from 'src/app/shared/viewModels/Produtor/ProdutorDetailsViewModel';
-import { ProdutorListViewModel } from 'src/app/shared/viewModels/Produtor/ProdutorListViewModel';
 import { RespTecnicoListViewModel } from 'src/app/shared/viewModels/respTecnico/RespTecnicoListViewModel';
 
 @Component({
@@ -20,7 +19,7 @@ export class PomarCriarComponent implements OnInit {
   cadastroForm: FormGroup;
   id: any;
   pomar: PomarCreateViewModel;
-  listaProdutores: ProdutorListViewModel[];
+  //listaProdutores: ProdutorListViewModel[];
   listaRespTecnicos: RespTecnicoListViewModel[];
   produtor: ProdutorDetailsViewModel;
 
@@ -35,6 +34,7 @@ export class PomarCriarComponent implements OnInit {
   ngOnInit(): void {
 
     this.id = this._Activatedroute.snapshot.paramMap.get("id");
+
     this.cadastroForm = new FormGroup({
       nome: new FormControl('', Validators.required),
       logradouro: new FormControl('', Validators.required),
@@ -42,18 +42,24 @@ export class PomarCriarComponent implements OnInit {
       cidade: new FormControl('', Validators.required),
       estado: new FormControl('', Validators.required),
       cep: new FormControl('', Validators.required),
-      produtorId: new FormControl('', Validators.required),
-      respTecnicoId: new FormControl('', Validators.required)
+      respTecnico: new FormControl('', Validators.required)
     });
+    this.getProdutorSelecionado();
 
-    this.carregarProdutores();
     this.carregarRespTecnico();
   }
 
+  addProdutor(): void {
+    this.pomar.produtor = this.produtor;
+  }
   adicionar() {
 
     this.pomar = Object.assign({}, this.pomar, this.cadastroForm.value);
+    this.addProdutor();
+    this.registrarPomar();
+  }
 
+  registrarPomar() {
     this.servicoPomar.adicionar(this.pomar)
       .subscribe(
         obj => {
@@ -70,10 +76,10 @@ export class PomarCriarComponent implements OnInit {
       );
   }
 
-  carregarProdutores(): void {
-    this.servicoProdutor.obter()
+  getProdutorSelecionado(): void {
+    this.servicoProdutor.obterPorId(this.id)
       .subscribe(obj => {
-        this.listaProdutores = obj;
+        this.produtor = obj;
       });
   }
   carregarRespTecnico(): void {
@@ -84,6 +90,6 @@ export class PomarCriarComponent implements OnInit {
   }
 
   cancelar(): void {
-    this.router.navigate(['pomar/listar']);
+    this.router.navigate(['pomar/produtor/' + this.id]);
   }
 }

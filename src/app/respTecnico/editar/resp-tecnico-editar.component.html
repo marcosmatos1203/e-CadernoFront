@@ -1,1 +1,123 @@
-<p>resp-tecnico-editar works!</p>
+<div class="container main-container">
+    <h4>Editar Responsável Técnico</h4>
+    <hr />
+    <form novalidate [formGroup]="cadastroForm" (ngSubmit)='atualizar()'>
+        <div clas="form-group">
+            <label class="col-md-2 control-label" for="nome">Id</label>
+            <div class="col-md-10">
+                <input class="form-control" id="nome" type="text" readonly formControlName="id" />
+            </div>
+
+            <label class="col-md-2 control-label" for="nome">Nome</label>
+            <div class="col-md-10">
+                <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)"
+                    formControlName="nome" />
+                <span
+                    *ngIf="cadastroForm.controls.nome.errors && (cadastroForm.controls.nome.dirty || cadastroForm.controls.nome.touched)"
+                    class="alert">
+                    Campo Nome é obrigatório
+                </span>
+            </div>
+            <label class="col-md-2 control-label" for="logradouro">Logradouro</label>
+            <div class="col-md-10">
+                <input class="form-control" id="logradouro" type="text" placeholder="logradouro (requerido)"
+                    formControlName="logradouro" />
+                <span
+                    *ngIf="cadastroForm.controls.logradouro.errors && (cadastroForm.controls.logradouro.dirty || cadastroForm.controls.logradouro.touched)"
+                    class="alert">
+                    Campo Logradouro é obrigatório
+                </span>
+            </div>
+            <label class="col-md-2 control-label" for="bairro_localidade">Bairro/Localidade</label>
+            <div class="col-md-10">
+                <input class="form-control" id="bairro_localidade" type="text" placeholder="bairro_localidade (requerido)"
+                    formControlName="bairro_localidade" />
+                <span
+                    *ngIf="cadastroForm.controls.bairro_localidade.errors && (cadastroForm.controls.bairro_localidade.dirty || cadastroForm.controls.bairro_localidade.touched)"
+                    class="alert">
+                    Campo Bairro/Localidade é obrigatório
+                </span>
+            </div>
+            <label class="col-md-2 control-label" for="crea">CREA</label>
+            <div class="col-md-10">
+                <input class="form-control" id="crea" type="text" placeholder="CREA (requerido)"
+                    formControlName="crea" />
+                <span
+                    *ngIf="cadastroForm.controls.crea.errors && (cadastroForm.controls.crea.dirty || cadastroForm.controls.crea.touched)"
+                    class="alert">
+                    Campo CREA é obrigatório
+                </span>
+            </div>
+            <label class="col-md-2 control-label" for="cidade">Cidade</label>
+            <div class="col-md-10">
+                <input class="form-control" id="cidade" type="text" placeholder="cidade (requerido)"
+                    formControlName="cidade" />
+                <span
+                    *ngIf="cadastroForm.controls.cidade.errors && (cadastroForm.controls.cidade.dirty || cadastroForm.controls.cidade.touched)"
+                    class="alert">
+                    Campo Cidade é obrigatório
+                </span>                
+            </div>
+            <label class="col-md-2 control-label" for="estado">Estado</label>
+            <div class="col-md-10">
+                <input class="form-control" id="estado" type="text" placeholder="estado (requerido)"
+                    formControlName="estado" />
+                <span
+                    *ngIf="cadastroForm.controls.estado.errors && (cadastroForm.controls.estado.dirty || cadastroForm.controls.estado.touched)"
+                    class="alert">
+                    Campo Estado é obrigatório
+                </span>                
+            </div>
+            <label class="col-md-2 control-label" for="cep">CEP</label>
+            <div class="col-md-10">
+                <input class="form-control" id="cep" type="text" placeholder="cep (requerido)"
+                    formControlName="cep" />
+                <span
+                    *ngIf="cadastroForm.controls.cep.errors && (cadastroForm.controls.cep.dirty || cadastroForm.controls.cep.touched)"
+                    class="alert">
+                    Campo CEP é obrigatório
+                </span>                
+            </div>
+            <label class="col-md-2 control-label" for="email">e-mail</label>
+            <div class="col-md-10">
+                <input class="form-control" id="email" type="text" placeholder="email (requerido)"
+                    formControlName="email" />
+                <span
+                    *ngIf="cadastroForm.controls.email.errors && (cadastroForm.controls.email.dirty || cadastroForm.controls.email.touched)"
+                    class="alert">
+                    Campo e-mail é obrigatório
+                </span>                
+            </div>
+            <label class="col-md-2 control-label" for="telefone1">Telefone</label>
+            <div class="col-md-10">
+                <input class="form-control" id="telefone1" type="text" placeholder="telefone1 (requerido)"
+                    formControlName="telefone1" />
+                <span
+                    *ngIf="cadastroForm.controls.telefone1.errors && (cadastroForm.controls.telefone1.dirty || cadastroForm.controls.telefone1.touched)"
+                    class="alert">
+                    Campo Telefone é obrigatório
+                </span>                
+            </div>
+            <label class="col-md-2 control-label" for="telefone2">Celular</label>
+            <div class="col-md-10">
+                <input class="form-control" id="telefone2" type="text" placeholder="telefone2 (requerido)"
+                    formControlName="telefone2" />
+                <span
+                    *ngIf="cadastroForm.controls.telefone2.errors && (cadastroForm.controls.telefone2.dirty || cadastroForm.controls.telefone2.touched)"
+                    class="alert">
+                    Campo Celular é obrigatório
+                </span>                
+            </div>
+        </div>
+        <br>    
+        <div class="form-group">
+            <div class="container">
+                <button class="btn btn-success" id="registrar" type="submit">Salvar</button>
+                <button class="btn btn-danger" id="cancelar" (click)="cancelar()">Cancelar</button>
+            </div>
+        </div>
+        <br><br><br>
+    </form>
+</div>
+
+<app-toasts aria-live="polite" aria-atomic="true"></app-toasts>

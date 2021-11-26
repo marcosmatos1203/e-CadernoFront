@@ -12,5 +12,5 @@ export class RespTecnicoDetailsViewModel{
     telefone1: string;
     telefone2: string;
     crea:string;
-    pomares: PomarListViewModel[];
+    //pomares: PomarListViewModel[];
 }

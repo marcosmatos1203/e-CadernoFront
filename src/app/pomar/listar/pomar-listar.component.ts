@@ -19,6 +19,7 @@ export class PomarListarComponent implements OnInit {
   pomarSelecionado: any;
   produtor:ProdutorListViewModel;
   id:any;
+ 
 
   page = 1;
   pageSize = 5;
@@ -69,7 +70,7 @@ export class PomarListarComponent implements OnInit {
 
               setTimeout(() => {
                 this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-                  this.router.navigate(['pomar/listar']);
+                  this.router.navigate(['pomar/produtor/'+this.id]);
                 });
               }, 5000);
             },

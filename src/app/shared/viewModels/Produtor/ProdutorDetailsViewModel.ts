@@ -12,5 +12,5 @@ export class ProdutorDetailsViewModel{
     email: string;
     telefone1: string;
     telefone2: string;
-    pomares: PomarListViewModel[];
+    //pomares: PomarListViewModel[];
 }

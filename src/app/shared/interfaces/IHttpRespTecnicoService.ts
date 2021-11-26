@@ -9,6 +9,8 @@ export interface IHttpRespTecnicoService {
 
     obter(): Observable<RespTecnicoListViewModel[]>
 
+    obterCompleto(): Observable<RespTecnicoDetailsViewModel[]>
+
     adicionar(obj: RespTecnicoCreateViewModel): Observable<RespTecnicoCreateViewModel>
 
     obterPorId(id: number): Observable<RespTecnicoDetailsViewModel>

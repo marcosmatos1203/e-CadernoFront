@@ -36,6 +36,7 @@ import { RespTecnicoListarComponent } from './respTecnico/listar/resp-tecnico-li
 import { RespTecnicoCriarComponent } from './respTecnico/criar/resp-tecnico-criar.component';
 import { RespTecnicoEditarComponent } from './respTecnico/editar/resp-tecnico-editar.component';
 import { HttpRespTecnicoService } from './respTecnico/services/http-resp-tecnico.service';
+import { HttpQuadraService } from './quadra/services/http-quadra.service';
 
 registerLocaleData(ptBr);
 
@@ -78,6 +79,7 @@ registerLocaleData(ptBr);
     { provide: 'IHttpParceiroServiceToken', useClass: HttpParceiroService },
     { provide: 'IHttpCupomServiceToken', useClass: HttpCupomService },
     { provide: 'IHttpProdutorServiceToken', useClass: HttpProdutorService },
+    { provide: 'IHttpQuadraServiceToken', useClass: HttpQuadraService },
     { provide: 'IHttpPomarServiceToken', useClass: HttpPomarService },
     { provide: 'IHttpRespTecnicoServiceToken', useClass: HttpRespTecnicoService}
   ],

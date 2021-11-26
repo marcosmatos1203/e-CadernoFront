@@ -1,0 +1,25 @@
+.container{
+    width: 95%;
+    margin: 1rem auto auto auto;
+}
+@media (max-width:450px) {
+    .container{
+        width: 70%;
+    }
+}
+
+@media (max-width:770px) {
+    .container{
+        width: 90%;
+    }
+}
+.title{
+    text-align: center;
+}
+img{
+    height: 30rem;
+}
+.imagem{
+    height: 80%;
+    text-align: center;
+}

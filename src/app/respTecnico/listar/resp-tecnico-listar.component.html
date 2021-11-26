@@ -4,9 +4,7 @@
     <div style="float: right;">
         <button class="btn btn-dark" [routerLink]="['/respTecnico/criar']">Cadastrar</button>
         <button class="btn btn-dark" [routerLink]="['/respTecnico/editar', respTecnicoSelecionado]"
-            [disabled]="!respTecnicoSelecionado">Editar</button>
-        <button class="btn btn-dark" [routerLink]="['/pomar/respTecnico', respTecnicoSelecionado]"
-            [disabled]="!respTecnicoSelecionado">Pomares</button>
+            [disabled]="!respTecnicoSelecionado">Editar</button>        
         <button class="btn btn-dark" (click)="abrirConfirmacao(modalExclusao)"
             [disabled]="!respTecnicoSelecionado">Excluir</button>
     </div>

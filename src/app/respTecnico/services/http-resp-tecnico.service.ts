@@ -17,6 +17,10 @@ export class HttpRespTecnicoService implements IHttpRespTecnicoService{
   
   constructor(private http: HttpClient) { }
 
+  obterCompleto(): Observable<RespTecnicoDetailsViewModel[]> {
+    return this.http.get<RespTecnicoDetailsViewModel[]>(`${this.url}`);
+  }
+
   obter(): Observable<RespTecnicoListViewModel[]> {
     return this.http.get<RespTecnicoListViewModel[]>(`${this.url}`);
   }

@@ -1,3 +1,5 @@
+import { ProdutorDetailsViewModel } from "../Produtor/ProdutorDetailsViewModel";
+import { RespTecnicoDetailsViewModel } from "../respTecnico/RespTecnicoDetailsViewModel";
 
 
 export class PomarEditViewModel{
@@ -8,6 +10,6 @@ export class PomarEditViewModel{
     cidade: string;
     estado: string;
     cep: string;
-    produtorId:number;
-    respTecnicoId: number;
+    produtor:ProdutorDetailsViewModel;
+    respTecnico: RespTecnicoDetailsViewModel;
 }

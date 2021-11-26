@@ -5,6 +5,8 @@
         <button class="btn btn-dark" [routerLink]="['/pomar/criar',id]">Cadastrar</button>
         <button class="btn btn-dark" [routerLink]="['/pomar/editar', pomarSelecionado]"
             [disabled]="!pomarSelecionado">Editar</button>
+        <button class="btn btn-dark" [routerLink]="['/quadra/pomar', pomarSelecionado]"
+            [disabled]="!pomarSelecionado">Quadras</button>
         <button class="btn btn-dark" (click)="abrirConfirmacao(modalExclusao)"
             [disabled]="!pomarSelecionado">Excluir</button>
     </div>

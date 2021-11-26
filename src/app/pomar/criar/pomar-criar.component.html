@@ -67,14 +67,14 @@
 
             <label class="col-md-2 control-label" for="respTecnico">Resp. Técnico</label>
             <div class="col-md-10">
-                <select class="form-control" id="respTecnicoId" formControlName="respTecnicoId">
+                <select class="form-control" id="respTecnico" formControlName="respTecnico">
                     <option value="">Selecione um Resp. Técnico</option>
-                    <option *ngFor="let respTecnico of listaRespTecnicos" value={{respTecnico.id}}>
+                    <option [ngValue]="respTecnico" *ngFor="let respTecnico of listaRespTecnicos"  >
                         {{respTecnico.nome}}
                     </option>
                 </select>
                 <span
-                    *ngIf="cadastroForm.controls.respTecnicoId.errors && (cadastroForm.controls.respTecnicoId.dirty || cadastroForm.controls.respTecnicoId.touched)"
+                    *ngIf="cadastroForm.controls.respTecnico.errors && (cadastroForm.controls.respTecnico.dirty || cadastroForm.controls.respTecnico.touched)"
                     class="alert">
                     Campo Responsável Técnico é obrigatório
                 </span>
@@ -87,6 +87,7 @@
                 <span><button class="btn btn-danger" id="cancelar" (click)="cancelar()">Cancelar</button></span>
             </div>
         </div>
+        <br><br><br>
     </form>
 </div>
 

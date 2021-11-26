@@ -1,3 +1,5 @@
+import { ProdutorListViewModel } from "../Produtor/ProdutorListViewModel";
+import { RespTecnicoListViewModel } from "../respTecnico/RespTecnicoListViewModel";
 
 export class PomarDetailsViewModel{
     id: number;
@@ -7,6 +9,6 @@ export class PomarDetailsViewModel{
     cidade: string;
     estado: string;
     cep: string;
-    produtorId:number;
-    respTecnicoId: number;
+    produtor:ProdutorListViewModel;
+    respTecnico: RespTecnicoListViewModel;
 }
