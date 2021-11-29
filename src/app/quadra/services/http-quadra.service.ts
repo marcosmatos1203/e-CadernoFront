@@ -16,6 +16,9 @@ export class HttpQuadraService implements IHttpQuadraService {
   url: string = environment.UrlBase+'quadra';
 
   constructor(private http: HttpClient) { }
+  obterQuadraPorIdPomar(id: number): Observable<QuadraListViewModel[]> {
+    throw new Error('Method not implemented.');
+  }
 
   obter(): Observable<QuadraListViewModel[]> {
     return this.http.get<QuadraListViewModel[]>(`${this.url}`);

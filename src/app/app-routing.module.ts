@@ -13,6 +13,8 @@ import { PomarListarComponent } from './pomar/listar/pomar-listar.component';
 import { ProdutorCriarComponent } from './produtor/criar/produtor-criar.component';
 import { ProdutorEditarComponent } from './produtor/editar/produtor-editar.component';
 import { ProdutorListarComponent } from './produtor/listar/produtor-listar.component';
+import { QuadraCriarComponent } from './quadra/criar/quadra-criar.component';
+import { QuadraEditarComponent } from './quadra/editar/quadra-editar.component';
 import { QuadraListarComponent } from './quadra/listar/quadra-listar.component';
 import { RespTecnicoCriarComponent } from './respTecnico/criar/resp-tecnico-criar.component';
 import { RespTecnicoEditarComponent } from './respTecnico/editar/resp-tecnico-editar.component';
@@ -37,6 +39,8 @@ const routes: Routes = [
   { path: 'respTecnico/criar', component: RespTecnicoCriarComponent },
   { path: 'respTecnico/editar/:id', component: RespTecnicoEditarComponent },
   { path: 'quadra/pomar/:id', component: QuadraListarComponent },
+  { path: 'quadra/editar/:id', component: QuadraEditarComponent },
+  { path: 'quadra/criar/:id', component: QuadraCriarComponent },
 ];
 
 @NgModule({

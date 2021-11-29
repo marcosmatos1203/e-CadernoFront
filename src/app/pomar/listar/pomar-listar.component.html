@@ -1,5 +1,6 @@
 <div class="container main-container">
     <h4>Lista Pomares</h4>
+    <h6>Produtor: {{produtor.nome}}</h6>
     <hr />
     <div style="float: right;">
         <button class="btn btn-dark" [routerLink]="['/pomar/criar',id]">Cadastrar</button>
@@ -20,7 +21,6 @@
                 <th scope="col">Nome</th>
                 <th scope="col">cidade</th>
                 <th scope="col">Resp. Tecnico</th>
-                <th scope="col">Produtor</th>
             </tr>
         </thead>
         <tbody>
@@ -35,7 +35,6 @@
                 <td>{{ pomar.nome }}</td>
                 <td>{{ pomar.cidade }}</td>
                 <td>{{ pomar.respTecnico.nome}}</td>
-                <td>{{ pomar.produtor.nome}}</td>
             </tr>
         </tbody>
     </table>

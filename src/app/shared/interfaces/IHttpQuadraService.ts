@@ -16,5 +16,7 @@ export interface IHttpQuadraService {
     editar(obj: QuadraEditViewModel): Observable<QuadraEditViewModel>
 
     excluir(id: number): Observable<number>
+
+    obterQuadraPorIdPomar(id: number):Observable<QuadraListViewModel[]>
       
 }
