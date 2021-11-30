@@ -34,6 +34,7 @@ export class PomarEditarComponent implements OnInit {
     this.id = this._Activatedroute.snapshot.paramMap.get("id");
 
     this.cadastroForm = new FormGroup({
+      id: new FormControl('', Validators.required),
       nome: new FormControl('', Validators.required),
       logradouro: new FormControl('', Validators.required),
       bairro_localidade: new FormControl('', Validators.required),
@@ -72,6 +73,7 @@ export class PomarEditarComponent implements OnInit {
   }
   carregarFormulario(pomar: PomarDetailsViewModel) {
     this.cadastroForm = new FormGroup({
+      id: new FormControl(pomar.id, Validators.required),
       nome: new FormControl(pomar.nome, Validators.required),
       logradouro: new FormControl(pomar.logradouro, Validators.required),
       bairro_localidade: new FormControl(pomar.bairro_localidade, Validators.required),

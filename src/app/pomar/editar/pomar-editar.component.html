@@ -3,6 +3,10 @@
     <hr />
     <form novalidate [formGroup]="cadastroForm" (ngSubmit)='atualizar()'>
         <div clas="form-group">
+            <label class="col-md-2 control-label" for="nome">Id</label>
+            <div class="col-md-10">
+                <input class="form-control" id="nome" type="text" readonly formControlName="id" />
+            </div>
             <label class="col-md-2 control-label" for="nome">Nome</label>
             <div class="col-md-10">
                 <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)"
