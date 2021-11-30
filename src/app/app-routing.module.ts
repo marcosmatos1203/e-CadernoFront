@@ -41,6 +41,7 @@ const routes: Routes = [
   { path: 'quadra/pomar/:id', component: QuadraListarComponent },
   { path: 'quadra/editar/:id', component: QuadraEditarComponent },
   { path: 'quadra/criar/:id', component: QuadraCriarComponent },
+  
 ];
 
 @NgModule({

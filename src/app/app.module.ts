@@ -38,6 +38,7 @@ import { RespTecnicoEditarComponent } from './respTecnico/editar/resp-tecnico-ed
 import { HttpRespTecnicoService } from './respTecnico/services/http-resp-tecnico.service';
 import { HttpQuadraService } from './quadra/services/http-quadra.service';
 import { QuadraListarComponent } from './quadra/listar/quadra-listar.component';
+import { QuadraCriarComponent } from './quadra/criar/quadra-criar.component';
 
 registerLocaleData(ptBr);
 
@@ -66,6 +67,7 @@ registerLocaleData(ptBr);
     RespTecnicoCriarComponent,
     RespTecnicoEditarComponent,
     QuadraListarComponent,
+    QuadraCriarComponent
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,7 @@ import { QuadraCreateViewModel } from 'src/app/shared/viewModels/Quadra/QuadraCr
   styleUrls: ['./quadra-criar.component.css']
 })
 export class QuadraCriarComponent implements OnInit {
+
   cadastroForm: FormGroup;
   id: any;
   pomar: PomarDetailsViewModel;
@@ -37,17 +38,14 @@ export class QuadraCriarComponent implements OnInit {
     });
     this.getPomarSelecionado();
   }
-
   addPomar(): void {
     this.quadra.pomar = this.pomar;
   }
   adicionar() {
-
     this.quadra = Object.assign({}, this.quadra, this.cadastroForm.value);
     this.addPomar();
     this.registrarQuadra();
   }
-
   registrarQuadra() {
     this.servicoQuadra.adicionar(this.quadra)
       .subscribe(
@@ -59,18 +57,18 @@ export class QuadraCriarComponent implements OnInit {
           }, 5000);
         },
         erro => {
-          this.toastService.show('Erro ao adicionar quadra: ' + erro.error.errors["anoPlantio"].toString(),
+          this.toastService.show('Erro ao adicionar quadra: ' + erro.error.errors["Nome"].toString(),
             { classname: 'bg-danger text-light', delay: 5000 });
         }
       );
   }
-
   getPomarSelecionado(): void {
     this.servicoPomar.obterPorId(this.id)
       .subscribe(obj => {
         this.pomar = obj;
       });
   }
+
   cancelar(): void {
     this.router.navigate(['quadra/pomar/' + this.id]);
   }
