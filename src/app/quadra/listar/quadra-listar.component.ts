@@ -65,7 +65,7 @@ export class QuadraListarComponent implements OnInit {
 
               setTimeout(() => {
                 this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-                  this.router.navigate(['pomar/produtor/'+this.id]);
+                  this.router.navigate(['quadra/pomar/'+this.id]);
                 });
               }, 5000);
             },
