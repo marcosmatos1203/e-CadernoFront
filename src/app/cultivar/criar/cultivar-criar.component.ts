@@ -2,10 +2,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IHttpCultivarService } from 'src/app/shared/interfaces/IHttpCultivarService';
-import { IHttpParceiroService } from 'src/app/shared/interfaces/IHttpParceiroService';
 import { ToastService } from 'src/app/shared/services/toast.service';
 import { CultivarCreateViewModel } from 'src/app/shared/viewModels/cultivar/CultivarCreateViewModel';
-import { ParceiroCreateViewModel } from 'src/app/shared/viewModels/parceiro/ParceiroCreateViewModel';
 
 @Component({
   selector: 'app-cultivar-criar',

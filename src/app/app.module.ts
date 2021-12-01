@@ -44,6 +44,12 @@ import { CultivarEditarComponent } from './cultivar/editar/cultivar-editar.compo
 import { CultivarListarComponent } from './cultivar/listar/cultivar-listar.component';
 import { CultivarCriarComponent } from './cultivar/criar/cultivar-criar.component';
 import { HttpCultivarService } from './cultivar/services/http-cultivar.service';
+import { PortaEnxertoCriarComponent } from './portaEnxerto/criar/porta-enxerto-criar.component';
+import { PortaEnxertoListarComponent } from './portaEnxerto/listar/porta-enxerto-listar.component';
+import { PortaEnxertoEditarComponent } from './portaEnxerto/editar/porta-enxerto-editar.component';
+import { HttpPortaEnxertoService } from './portaEnxerto/services/http-porta-enxerto.service';
+import { CultivarQuadraEditarComponent } from './cultivarQuadra/editar/cultivar-quadra-editar.component';
+import { CultivarQuadraListarComponent } from './cultivarQuadra/listar/cultivar-quadra-listar.component';
 
 registerLocaleData(ptBr);
 
@@ -76,7 +82,12 @@ registerLocaleData(ptBr);
     QuadraEditarComponent,
     CultivarEditarComponent,
     CultivarListarComponent,
-    CultivarCriarComponent
+    CultivarCriarComponent,
+    PortaEnxertoCriarComponent,
+    PortaEnxertoListarComponent,
+    PortaEnxertoEditarComponent,
+    CultivarQuadraEditarComponent,
+    CultivarQuadraListarComponent
     
   ],
   imports: [
@@ -96,6 +107,7 @@ registerLocaleData(ptBr);
     { provide: 'IHttpQuadraServiceToken', useClass: HttpQuadraService },
     { provide: 'IHttpPomarServiceToken', useClass: HttpPomarService },
     { provide: 'IHttpRespTecnicoServiceToken', useClass: HttpRespTecnicoService},
+    { provide: 'IHttpPortaEnxertoServiceToken', useClass: HttpPortaEnxertoService},
     { provide: 'IHttpCultivarServiceToken', useClass: HttpCultivarService}
   ],
   bootstrap: [AppComponent]

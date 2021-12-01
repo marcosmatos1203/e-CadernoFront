@@ -13,6 +13,9 @@ import { ParceiroListarComponent } from './parceiro/listar/parceiro-listar.compo
 import { PomarCriarComponent } from './pomar/criar/pomar-criar.component';
 import { PomarEditarComponent } from './pomar/editar/pomar-editar.component';
 import { PomarListarComponent } from './pomar/listar/pomar-listar.component';
+import { PortaEnxertoCriarComponent } from './portaEnxerto/criar/porta-enxerto-criar.component';
+import { PortaEnxertoEditarComponent } from './portaEnxerto/editar/porta-enxerto-editar.component';
+import { PortaEnxertoListarComponent } from './portaEnxerto/listar/porta-enxerto-listar.component';
 import { ProdutorCriarComponent } from './produtor/criar/produtor-criar.component';
 import { ProdutorEditarComponent } from './produtor/editar/produtor-editar.component';
 import { ProdutorListarComponent } from './produtor/listar/produtor-listar.component';
@@ -47,6 +50,9 @@ const routes: Routes = [
   { path: 'cultivar/listar', component: CultivarListarComponent },
   { path: 'cultivar/criar', component: CultivarCriarComponent },
   { path: 'cultivar/editar/:id', component: CultivarEditarComponent },
+  { path: 'portaEnxerto/listar', component: PortaEnxertoListarComponent },
+  { path: 'portaEnxerto/criar', component: PortaEnxertoCriarComponent },
+  { path: 'portaEnxerto/editar/:id', component: PortaEnxertoEditarComponent },
 ];
 
 @NgModule({

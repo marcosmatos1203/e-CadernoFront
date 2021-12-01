@@ -2,7 +2,6 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { IHttpCultivarService } from 'src/app/shared/interfaces/IHttpCultivarService';
-import { IHttpParceiroService } from 'src/app/shared/interfaces/IHttpParceiroService';
 import { ToastService } from 'src/app/shared/services/toast.service';
 import { CultivarListViewModel } from 'src/app/shared/viewModels/cultivar/CultivarListViewModel';
 
