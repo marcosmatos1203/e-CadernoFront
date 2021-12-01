@@ -1,37 +1,37 @@
 <div class="container main-container">
-    <h4>Lista Quadras</h4>
+    <h4>Lista Pomares</h4>
     <hr />
     <div style="float: right;">
-        <button class="btn btn-dark" [routerLink]="['/quadra/criar',id]">Cadastrar</button>
-        <button class="btn btn-dark" [routerLink]="['/quadra/editar', quadraSelecionado]"
-            [disabled]="!quadraSelecionado">Editar</button>
-        <button class="btn btn-dark" [routerLink]="['/cultivarQuadra', quadraSelecionado]"
-            [disabled]="!quadraSelecionado">Cultivares</button>
+        <button class="btn btn-dark" [routerLink]="['/cultivarQuadra/criar',id]">Cadastrar</button>
+        <button class="btn btn-dark" [routerLink]="['/cultivarQuadra/editar', cultivarQuadraSelecionado]"
+            [disabled]="!cultivarQuadraSelecionado">Editar</button>
         <button class="btn btn-dark" (click)="abrirConfirmacao(modalExclusao)"
-            [disabled]="!quadraSelecionado">Excluir</button>
+            [disabled]="!cultivarQuadraSelecionado">Excluir</button>
     </div>
-    <br><br>
-
+    <br>
+    <br>
     <table class="table table-striped" data-click-to-select="true">
         <thead>
             <tr>
                 <th scope="col"></th>
                 <th scope="col">Id</th>
-                <th scope="col">Ano do Plantio</th>
-                <th scope="col">Quantida de Colmeias</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Cultivar</th>
+                <th scope="col">Porta Enxerto</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let quadra of listaQuadras">
+            <tr *ngFor="let cultivarQuadra of listaCultivarQuadra">
                 <td>
                     <div class="custom-control">
                         <input type="radio" name="flexRadioDefault" class="custom-control-input" id="customRadio"
-                            value="{{ quadra.id }}" [(ngModel)]="quadraSelecionado">
+                            value="{{ cultivarQuadra.id }}" [(ngModel)]="cultivarQuadraSelecionado">
                     </div>
                 </td>
-                <td>{{ quadra.id }}</td>
-                <td>{{ quadra.anoPlantio }}</td>
-                <td>{{ quadra.quantidadeColmeias }}</td>
+                <td>{{ cultivarQuadra.id }}</td>
+                <td>{{ cultivarQuadra.quantidade }}</td>
+                <td>{{ cultivarQuadra.cultivar.nome }}</td>
+                <td>{{ cultivarQuadra.portaEnxerto.nome}}</td>
             </tr>
         </tbody>
     </table>
@@ -41,17 +41,14 @@
             (pageChange)="atualizar()">
         </ngb-pagination>
     </div>
-
-
-
 </div>
 
 <ng-template #modalExclusao let-modal>
     <div class="modal-header">
-        <h4 class="modal-title">Excluir Quadra</h4>
+        <h4 class="modal-title">Excluir Cultivar</h4>
     </div>
     <div class="modal-body">
-        Deseja realmente excluir esse Quadra?
+        Deseja realmente excluir esse Cultivar?
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-danger" (click)="modal.close('Excluir')">Excluir</button>

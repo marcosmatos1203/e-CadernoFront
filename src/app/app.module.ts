@@ -50,6 +50,8 @@ import { PortaEnxertoEditarComponent } from './portaEnxerto/editar/porta-enxerto
 import { HttpPortaEnxertoService } from './portaEnxerto/services/http-porta-enxerto.service';
 import { CultivarQuadraEditarComponent } from './cultivarQuadra/editar/cultivar-quadra-editar.component';
 import { CultivarQuadraListarComponent } from './cultivarQuadra/listar/cultivar-quadra-listar.component';
+import { HttpCultivarQuadraService } from './cultivarQuadra/services/http-cultivar-quadra.service';
+import { CultivarQuadraCriarComponent } from './cultivarQuadra/criar/cultivar-quadra-criar.component';
 
 registerLocaleData(ptBr);
 
@@ -87,6 +89,7 @@ registerLocaleData(ptBr);
     PortaEnxertoListarComponent,
     PortaEnxertoEditarComponent,
     CultivarQuadraEditarComponent,
+    CultivarQuadraCriarComponent,
     CultivarQuadraListarComponent
     
   ],
@@ -107,6 +110,7 @@ registerLocaleData(ptBr);
     { provide: 'IHttpQuadraServiceToken', useClass: HttpQuadraService },
     { provide: 'IHttpPomarServiceToken', useClass: HttpPomarService },
     { provide: 'IHttpRespTecnicoServiceToken', useClass: HttpRespTecnicoService},
+    { provide: 'IHttpCultivarQuadraServiceToken', useClass: HttpCultivarQuadraService},
     { provide: 'IHttpPortaEnxertoServiceToken', useClass: HttpPortaEnxertoService},
     { provide: 'IHttpCultivarServiceToken', useClass: HttpCultivarService}
   ],

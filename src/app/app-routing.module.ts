@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { CultivarCriarComponent } from './cultivar/criar/cultivar-criar.component';
 import { CultivarEditarComponent } from './cultivar/editar/cultivar-editar.component';
 import { CultivarListarComponent } from './cultivar/listar/cultivar-listar.component';
+import { CultivarQuadraCriarComponent } from './cultivarQuadra/criar/cultivar-quadra-criar.component';
+import { CultivarQuadraEditarComponent } from './cultivarQuadra/editar/cultivar-quadra-editar.component';
+import { CultivarQuadraListarComponent } from './cultivarQuadra/listar/cultivar-quadra-listar.component';
 import { CupomCriarComponent } from './cupom/criar/cupom-criar.component';
 import { CupomEditarComponent } from './cupom/editar/cupom-editar.component';
 import { CupomListarComponent } from './cupom/listar/cupom-listar.component';
@@ -25,6 +28,8 @@ import { QuadraListarComponent } from './quadra/listar/quadra-listar.component';
 import { RespTecnicoCriarComponent } from './respTecnico/criar/resp-tecnico-criar.component';
 import { RespTecnicoEditarComponent } from './respTecnico/editar/resp-tecnico-editar.component';
 import { RespTecnicoListarComponent } from './respTecnico/listar/resp-tecnico-listar.component';
+import { CultivarQuadraCreateViewModel } from './shared/viewModels/cultivarQuadra/CultivarQuadraCreateViewModel';
+import { CultivarQuadraEditViewModel } from './shared/viewModels/cultivarQuadra/CultivarQuadraEditViewModel';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -53,6 +58,9 @@ const routes: Routes = [
   { path: 'portaEnxerto/listar', component: PortaEnxertoListarComponent },
   { path: 'portaEnxerto/criar', component: PortaEnxertoCriarComponent },
   { path: 'portaEnxerto/editar/:id', component: PortaEnxertoEditarComponent },
+  { path: 'cultivarQuadra/:id', component: CultivarQuadraListarComponent },
+  { path: 'cultivarQuadra/criar/:id', component: CultivarQuadraCriarComponent },
+  { path: 'cultivarQuadra/editar/:id', component: CultivarQuadraEditarComponent },
 ];
 
 @NgModule({

@@ -25,7 +25,6 @@ export class HttpPomarService implements IHttpPomarService{
     return this.http.get<PomarListViewModel[]>(`${this.url}`);
   }
   adicionar(obj: PomarCreateViewModel): Observable<PomarCreateViewModel> {
-    console.log(obj);
     return this.http.post<PomarCreateViewModel>(this.url, obj);
   }
   obterPorId(id: number): Observable<PomarDetailsViewModel> {

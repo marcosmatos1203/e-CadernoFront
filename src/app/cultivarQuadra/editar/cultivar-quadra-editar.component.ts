@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cultivar-quadra-editar',
-  templateUrl: './cultivar-quadra-editar.component.html',
-  styleUrls: ['./cultivar-quadra-editar.component.css']
+  templateUrl: './cultivar-quadra-editar.component.html'
 })
 export class CultivarQuadraEditarComponent implements OnInit {
 

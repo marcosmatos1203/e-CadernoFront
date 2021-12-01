@@ -9,8 +9,7 @@ import { QuadraListViewModel } from 'src/app/shared/viewModels/Quadra/QuadraList
 
 @Component({
   selector: 'app-quadra-listar',
-  templateUrl: './quadra-listar.component.html',
-  styleUrls: ['./quadra-listar.component.css']
+  templateUrl: './quadra-listar.component.html'
 })
 export class QuadraListarComponent implements OnInit {
 
