@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CultivarCriarComponent } from './cultivar/criar/cultivar-criar.component';
+import { CultivarEditarComponent } from './cultivar/editar/cultivar-editar.component';
+import { CultivarListarComponent } from './cultivar/listar/cultivar-listar.component';
 import { CupomCriarComponent } from './cupom/criar/cupom-criar.component';
 import { CupomEditarComponent } from './cupom/editar/cupom-editar.component';
 import { CupomListarComponent } from './cupom/listar/cupom-listar.component';
@@ -41,7 +44,9 @@ const routes: Routes = [
   { path: 'quadra/pomar/:id', component: QuadraListarComponent },
   { path: 'quadra/editar/:id', component: QuadraEditarComponent },
   { path: 'quadra/criar/:id', component: QuadraCriarComponent },
-  
+  { path: 'cultivar/listar', component: CultivarListarComponent },
+  { path: 'cultivar/criar', component: CultivarCriarComponent },
+  { path: 'cultivar/editar/:id', component: CultivarEditarComponent },
 ];
 
 @NgModule({

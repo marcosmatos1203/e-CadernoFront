@@ -40,6 +40,10 @@ import { HttpQuadraService } from './quadra/services/http-quadra.service';
 import { QuadraListarComponent } from './quadra/listar/quadra-listar.component';
 import { QuadraCriarComponent } from './quadra/criar/quadra-criar.component';
 import { QuadraEditarComponent } from './quadra/editar/quadra-editar.component';
+import { CultivarEditarComponent } from './cultivar/editar/cultivar-editar.component';
+import { CultivarListarComponent } from './cultivar/listar/cultivar-listar.component';
+import { CultivarCriarComponent } from './cultivar/criar/cultivar-criar.component';
+import { HttpCultivarService } from './cultivar/services/http-cultivar.service';
 
 registerLocaleData(ptBr);
 
@@ -69,7 +73,10 @@ registerLocaleData(ptBr);
     RespTecnicoEditarComponent,
     QuadraListarComponent,
     QuadraCriarComponent,
-    QuadraEditarComponent
+    QuadraEditarComponent,
+    CultivarEditarComponent,
+    CultivarListarComponent,
+    CultivarCriarComponent
     
   ],
   imports: [
@@ -88,7 +95,8 @@ registerLocaleData(ptBr);
     { provide: 'IHttpProdutorServiceToken', useClass: HttpProdutorService },
     { provide: 'IHttpQuadraServiceToken', useClass: HttpQuadraService },
     { provide: 'IHttpPomarServiceToken', useClass: HttpPomarService },
-    { provide: 'IHttpRespTecnicoServiceToken', useClass: HttpRespTecnicoService}
+    { provide: 'IHttpRespTecnicoServiceToken', useClass: HttpRespTecnicoService},
+    { provide: 'IHttpCultivarServiceToken', useClass: HttpCultivarService}
   ],
   bootstrap: [AppComponent]
 })
