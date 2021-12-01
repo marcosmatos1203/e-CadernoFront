@@ -29,6 +29,7 @@ export class HttpQuadraService implements IHttpQuadraService {
     return this.http.post<QuadraCreateViewModel>(this.url, obj);
   }
   obterPorId(id: number): Observable<QuadraDetailsViewModel> {
+    
     return this.http.get<QuadraDetailsViewModel>(`${this.url}/${id}`);
   }
   editar(obj: QuadraEditViewModel): Observable<QuadraEditViewModel> {

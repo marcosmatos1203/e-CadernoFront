@@ -12,8 +12,7 @@ import { RespTecnicoListViewModel } from 'src/app/shared/viewModels/respTecnico/
 
 @Component({
   selector: 'app-pomar-editar',
-  templateUrl: './pomar-editar.component.html',
-  styleUrls: ['./pomar-editar.component.css']
+  templateUrl: './pomar-editar.component.html'
 })
 export class PomarEditarComponent implements OnInit {
 

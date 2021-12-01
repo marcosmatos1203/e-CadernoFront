@@ -1,1 +1,64 @@
-<p>quadra-editar works!</p>
+<div class="container main-container">
+    <h4>Cadastrar Pomar</h4>
+    <hr />
+    <form novalidate [formGroup]="cadastroForm" (ngSubmit)='atualizar()'>
+        <div clas="form-group">
+            <label class="col-md-2 control-label" for="id">Id</label>
+            <div class="col-md-10">
+                <input class="form-control" id="id" type="text" readonly formControlName="id" />
+            </div>
+            <label class="col-md-2 control-label" for="anoPlantio">anoPlantio</label>
+            <div class="col-md-10">
+                <input class="form-control" id="anoPlantio" type="text" placeholder="anoPlantio (requerido)"
+                    formControlName="anoPlantio" />
+                <span
+                    *ngIf="cadastroForm.controls.anoPlantio.errors && (cadastroForm.controls.anoPlantio.dirty || cadastroForm.controls.anoPlantio.touched)"
+                    class="alert">
+                    Campo anoPlantio é obrigatório
+                </span>
+            </div>
+            
+            <label class="col-md-2 control-label" for="distanciaFilas">distanciaFilas</label>
+            <div class="col-md-10">
+                <input class="form-control" id="distanciaFilas" type="text" placeholder="distanciaFilas (requerido)"
+                    formControlName="distanciaFilas" />
+                <span
+                    *ngIf="cadastroForm.controls.distanciaFilas.errors && (cadastroForm.controls.distanciaFilas.dirty || cadastroForm.controls.distanciaFilas.touched)"
+                    class="alert">
+                    Campo distanciaFilas é obrigatório
+                </span>
+            </div>
+            <label class="col-md-2 control-label" for="distanciaPlantas">distanciaPlantas</label>
+            <div class="col-md-10">
+                <input class="form-control" id="distanciaPlantas" type="text" placeholder="distanciaPlantas (requerido)"
+                    formControlName="distanciaPlantas" />
+                <span
+                    *ngIf="cadastroForm.controls.distanciaPlantas.errors && (cadastroForm.controls.distanciaPlantas.dirty || cadastroForm.controls.distanciaPlantas.touched)"
+                    class="alert">
+                    Campo distanciaPlantas é obrigatório
+                </span>
+            </div>
+            <label class="col-md-2 control-label" for="quantidadeColmeias">quantidadeColmeias</label>
+            <div class="col-md-10">
+                <input class="form-control" id="quantidadeColmeias" type="text" placeholder="quantidadeColmeias (requerido)"
+                    formControlName="quantidadeColmeias" />
+                <span
+                    *ngIf="cadastroForm.controls.quantidadeColmeias.errors && (cadastroForm.controls.quantidadeColmeias.dirty || cadastroForm.controls.quantidadeColmeias.touched)"
+                    class="alert">
+                    Campo quantidadeColmeias é obrigatório
+                </span>                
+            </div>
+           
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span><button class="btn btn-success" id="registrar" type="submit">Registrar</button></span>
+                <span><button class="btn btn-danger" id="cancelar" (click)="cancelar()">Cancelar</button></span>
+            </div>
+        </div>
+        <br><br><br>
+    </form>
+</div>
+
+<app-toasts aria-live="polite" aria-atomic="true"></app-toasts>
