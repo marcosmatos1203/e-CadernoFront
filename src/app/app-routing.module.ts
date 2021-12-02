@@ -10,6 +10,9 @@ import { CupomCriarComponent } from './cupom/criar/cupom-criar.component';
 import { CupomEditarComponent } from './cupom/editar/cupom-editar.component';
 import { CupomListarComponent } from './cupom/listar/cupom-listar.component';
 import { HomeComponent } from './home/home.component';
+import { MonitoramentoPragaCriarComponent } from './monitoramentoPraga/criar/monitoramento-praga-criar.component';
+import { MonitoramentoPragaEditarComponent } from './monitoramentoPraga/editar/monitoramento-praga-editar.component';
+import { MonitoramentoPragaListarComponent } from './monitoramentoPraga/listar/monitoramento-praga-listar.component';
 import { ParceiroCriarComponent } from './parceiro/criar/parceiro-criar.component';
 import { ParceiroEditarComponent } from './parceiro/editar/parceiro-editar.component';
 import { ParceiroListarComponent } from './parceiro/listar/parceiro-listar.component';
@@ -67,6 +70,9 @@ const routes: Routes = [
   { path: 'praga/listar', component: PragaListarComponent },
   { path: 'praga/criar', component: PragaCriarComponent },
   { path: 'praga/editar/:id', component: PragaEditarComponent },
+  { path: 'monitoramentoPraga/listar', component: MonitoramentoPragaListarComponent },
+  { path: 'monitoramentoPraga/criar', component: MonitoramentoPragaCriarComponent },
+  { path: 'monitoramentoPraga/editar/:id', component: MonitoramentoPragaEditarComponent },
 ];
 
 @NgModule({

@@ -7,6 +7,8 @@
             [disabled]="!quadraSelecionado">Editar</button>
         <button class="btn btn-dark" [routerLink]="['/cultivarQuadra', quadraSelecionado]"
             [disabled]="!quadraSelecionado">Cultivares</button>
+        <button class="btn btn-dark" [routerLink]="['/armadilha', quadraSelecionado]"
+            [disabled]="!quadraSelecionado">Armadilha</button>
         <button class="btn btn-dark" (click)="abrirConfirmacao(modalExclusao)"
             [disabled]="!quadraSelecionado">Excluir</button>
     </div>
