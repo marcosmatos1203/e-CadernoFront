@@ -52,6 +52,13 @@ import { CultivarQuadraEditarComponent } from './cultivarQuadra/editar/cultivar-
 import { CultivarQuadraListarComponent } from './cultivarQuadra/listar/cultivar-quadra-listar.component';
 import { HttpCultivarQuadraService } from './cultivarQuadra/services/http-cultivar-quadra.service';
 import { CultivarQuadraCriarComponent } from './cultivarQuadra/criar/cultivar-quadra-criar.component';
+import { PragaCriarComponent } from './praga/criar/praga-criar.component';
+import { PragaEditarComponent } from './praga/editar/praga-editar.component';
+import { PragaListarComponent } from './praga/listar/praga-listar.component';
+import { HttpPragaService } from './praga/services/http-praga.service';
+import { MonitoramentoPragaCriarComponent } from './monitoramentoPraga/criar/monitoramento-praga-criar.component';
+import { MonitoramentoPragaEditarComponent } from './monitoramentoPraga/editar/monitoramento-praga-editar.component';
+import { MonitoramentoPragaListarComponent } from './monitoramentoPraga/listar/monitoramento-praga-listar.component';
 
 registerLocaleData(ptBr);
 
@@ -90,7 +97,13 @@ registerLocaleData(ptBr);
     PortaEnxertoEditarComponent,
     CultivarQuadraEditarComponent,
     CultivarQuadraCriarComponent,
-    CultivarQuadraListarComponent
+    CultivarQuadraListarComponent,
+    PragaCriarComponent,
+    PragaEditarComponent,
+    PragaListarComponent,
+    MonitoramentoPragaCriarComponent,
+    MonitoramentoPragaEditarComponent,
+    MonitoramentoPragaListarComponent
     
   ],
   imports: [
@@ -112,6 +125,7 @@ registerLocaleData(ptBr);
     { provide: 'IHttpRespTecnicoServiceToken', useClass: HttpRespTecnicoService},
     { provide: 'IHttpCultivarQuadraServiceToken', useClass: HttpCultivarQuadraService},
     { provide: 'IHttpPortaEnxertoServiceToken', useClass: HttpPortaEnxertoService},
+    { provide: 'IHttpPragaServiceToken', useClass: HttpPragaService},
     { provide: 'IHttpCultivarServiceToken', useClass: HttpCultivarService}
   ],
   bootstrap: [AppComponent]

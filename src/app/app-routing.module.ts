@@ -19,6 +19,9 @@ import { PomarListarComponent } from './pomar/listar/pomar-listar.component';
 import { PortaEnxertoCriarComponent } from './portaEnxerto/criar/porta-enxerto-criar.component';
 import { PortaEnxertoEditarComponent } from './portaEnxerto/editar/porta-enxerto-editar.component';
 import { PortaEnxertoListarComponent } from './portaEnxerto/listar/porta-enxerto-listar.component';
+import { PragaCriarComponent } from './praga/criar/praga-criar.component';
+import { PragaEditarComponent } from './praga/editar/praga-editar.component';
+import { PragaListarComponent } from './praga/listar/praga-listar.component';
 import { ProdutorCriarComponent } from './produtor/criar/produtor-criar.component';
 import { ProdutorEditarComponent } from './produtor/editar/produtor-editar.component';
 import { ProdutorListarComponent } from './produtor/listar/produtor-listar.component';
@@ -61,6 +64,9 @@ const routes: Routes = [
   { path: 'cultivarQuadra/:id', component: CultivarQuadraListarComponent },
   { path: 'cultivarQuadra/criar/:id', component: CultivarQuadraCriarComponent },
   { path: 'cultivarQuadra/editar/:id', component: CultivarQuadraEditarComponent },
+  { path: 'praga/listar', component: PragaListarComponent },
+  { path: 'praga/criar', component: PragaCriarComponent },
+  { path: 'praga/editar/:id', component: PragaEditarComponent },
 ];
 
 @NgModule({

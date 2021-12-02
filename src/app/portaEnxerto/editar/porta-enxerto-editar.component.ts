@@ -1,12 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IHttpCultivarService } from 'src/app/shared/interfaces/IHttpCultivarService';
 import { IHttpPortaEnxertoService } from 'src/app/shared/interfaces/IHttpPortaEnxertoService';
 import { ToastService } from 'src/app/shared/services/toast.service';
-import { CultivarDetailsViewModel } from 'src/app/shared/viewModels/cultivar/CultivarDetailsViewModel';
-import { CultivarEditViewModel } from 'src/app/shared/viewModels/cultivar/CultivarEditViewModel';
-import { PortaEnxertoCreateViewModel } from 'src/app/shared/viewModels/PortaEnxerto/PortaEnxertoCreateViewModel';
 import { PortaEnxertoDetailsViewModel } from 'src/app/shared/viewModels/PortaEnxerto/PortaEnxertoDetailsViewModel';
 import { PortaEnxertoEditViewModel } from 'src/app/shared/viewModels/PortaEnxerto/PortaEnxertoEditViewModel';
 
